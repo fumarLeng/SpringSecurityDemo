@@ -35,6 +35,7 @@ public class RedisController {
         Map<String, String> map = new HashMap<>();
         String token = TokenUtil.genAccessToken("Leo");
         map.put("encoding", token);
+        String qqq = "123 ".trim();
         return map;
 
     }
