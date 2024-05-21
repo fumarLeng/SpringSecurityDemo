@@ -3,6 +3,7 @@ package com.example.springsecuritydemo.service;
 import com.example.springsecuritydemo.model.SysMyPermission;
 import com.example.springsecuritydemo.model.SysMyUser;
 import jakarta.annotation.Resource;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Slf4j
 @Component("customerUserDetailsService")
 public class CustomerUserDetailsService implements UserDetailsService {
 
@@ -23,6 +25,8 @@ public class CustomerUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        log.info("已進來CustomerUserDetailsService 的 loadUserByUsername 方法");
+
         SysMyUser user = userService.getUserInfoByUserId(username);
 
         //如果不存在要丟例外

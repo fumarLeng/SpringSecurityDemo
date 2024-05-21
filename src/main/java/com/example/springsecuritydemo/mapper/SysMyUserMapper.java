@@ -2,12 +2,14 @@ package com.example.springsecuritydemo.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.example.springsecuritydemo.model.SysMyUser;
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
+@Mapper
 public interface SysMyUserMapper extends BaseMapper<SysMyUser> {
     /**
      * 根据用户名账号获取用户信息

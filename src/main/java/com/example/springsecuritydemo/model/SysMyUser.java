@@ -27,106 +27,127 @@ public class SysMyUser implements Serializable, UserDetails {
     /**
      * user_no
      */
+    @TableField("user_no")
     private String userNo;
 
     /**
      * user_name
      */
+    @TableField("user_name")
     private String userName;
 
     /**
      * password
      */
+    @TableField("password")
     private String password;
 
     /**
      * nick_name
      */
+    @TableField("nick_name")
     private String nickName;
 
     /**
      * phone_number
      */
+    @TableField("phone_number")
     private String phoneNumber;
 
     /**
      * email
      */
+    @TableField("email")
     private String email;
 
     /**
      * department_id
      */
+    @TableField("department_id")
     private String departmentId;
 
     /**
      * department_name
      */
+    @TableField("department_name")
     private String departmentName;
 
     /**
      * is_admin
      */
+    @TableField("is_admin")
     private String isAdmin;
 
     /**
      * sex
      */
+    @TableField("sex")
     private String sex;
 
     /**
      * post_id
      */
+    @TableField("post_id")
     private String postId;
 
     /**
      * post_name
      */
+    @TableField("post_name")
     private String postName;
 
     /**
      * is_account_non_expired
      */
+    @TableField("is_account_non_expired")
     private Boolean isAccountNonExpired;
 
     /**
      * is_account_non_locked
      */
+    @TableField("is_account_non_locked")
     private Boolean isAccountNonLocked;
 
     /**
      * is_credentials_non_expired
      */
+    @TableField("is_credentials_non_expired")
     private Boolean isCredentialsNonExpired;
 
     /**
      * is_enabled
      */
+    @TableField("is_enabled")
     private Boolean isEnabled;
 
     /**
      * insert_user
      */
+    @TableField("insert_user")
     private String insertUser;
 
     /**
      * insert_time
      */
+    @TableField("insert_time")
     private String insertTime;
 
     /**
      * update_user
      */
+    @TableField("update_user")
     private String updateUser;
 
     /**
      * update_time
      */
+    @TableField("update_time")
     private String updateTime;
 
     /**
      * license_code
      */
+    @TableField("license_code")
     private String licenseCode;
 
 

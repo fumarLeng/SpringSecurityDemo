@@ -6,9 +6,7 @@
 
     <!-- 根据用户名账号获取用户信息 -->
     <select id="getUserInfoByUserId" resultType="com.example.springsecuritydemo.model.SysMyUser">
-        select *
-        from t_sys_my_user u
-        where u.user_no = #{username};
+        select * from t_sys_my_user u where u.user_no = #{username};
     </select>
 
     <!-- 根据用户id获取用户具备的权限信息 -->
@@ -19,8 +17,10 @@
                  left join t_sys_my_role_permission rp on rp.role_sid = r.sid
                  left join t_sys_my_permission p on p.sid = rp.permission_sid
                  left join t_sys_my_user u on u.sid = ur.user_sid
-        where p.status = '1'
+        where p.license_code = '1'
           and r.status = '1'
           and u.sid = #{sid};
     </select>
+
+
 </mapper>
