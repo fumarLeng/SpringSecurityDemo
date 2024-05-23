@@ -69,6 +69,7 @@ public class SpringSecurityConfig {
                                 .successHandler(loginSuccessHandler).failureHandler(loginFiledHandler)
                 )
                 // 禁用了 CSRF 保護。
+
                 .csrf((csrf) -> csrf.disable())
                 // 配置了會話管理策略為 STATELESS（無狀態）。在無狀態的會話管理策略下，應用程序不會創建或使用 HTTP 會話，每個請求都是獨立的，服務器不會在請求之間保留任何狀態信息。
                 .sessionManagement((sessionManagement) -> sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
